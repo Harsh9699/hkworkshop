@@ -662,8 +662,4 @@ spline-viewer {
     .contact-form-container {
         padding: 24px;
     }
-    
-    spline-viewer {
-        pointer-events: none; /* Prevents the 3D model from blocking scrolling on touch screens */
-    }
 }
