@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Preloader Animation
+    setTimeout(() => {
+        document.body.classList.remove('loading');
+        document.body.classList.add('loaded');
+        
+        // Remove preloader from DOM after transition completes (1.2s transition)
+        setTimeout(() => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.display = 'none';
+            }
+        }, 1200);
+    }, 1500); // Show logo pulsing for 1.5 seconds
+
     // Current Year for footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {

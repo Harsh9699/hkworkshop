@@ -10,10 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-panel preloader-left"></div>
+        <div class="preloader-panel preloader-right"></div>
+        <div class="preloader-content">
+            <img src="logo.png" alt="HK Workshop" class="preloader-logo">
+        </div>
+    </div>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">HK Workshop</a>
+            <a href="#" class="logo"><img src="logo.png" alt="HK Workshop Logo"></a>
             <ul class="nav-links desktop-menu">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -277,6 +285,7 @@
     <footer id="contact" class="footer">
         <div class="footer-container">
             <div class="footer-info fade-in">
+                <img src="logo.png" alt="HK Workshop Logo" class="footer-logo">
                 <h2>Let's build something great.</h2>
                 <p>Reach out to discuss your next big idea.</p>
             </div>
