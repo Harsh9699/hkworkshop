@@ -13,6 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1200);
     }, 1500); // Show logo pulsing for 1.5 seconds
 
+    // Remove Spline watermark (Shadow DOM hack) for all viewers
+    const removeSplineLogo = () => {
+        const splines = document.querySelectorAll('spline-viewer');
+        splines.forEach(spline => {
+            if (spline && spline.shadowRoot) {
+                const logo = spline.shadowRoot.querySelector('#logo');
+                if (logo) {
+                    logo.remove();
+                }
+            }
+        });
+    };
+    // Run multiple times during initial load sequence
+    removeSplineLogo();
+    setTimeout(removeSplineLogo, 1000);
+    setTimeout(removeSplineLogo, 2000);
+    setTimeout(removeSplineLogo, 4000);
+    setTimeout(removeSplineLogo, 8000);
+
     // Current Year for footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
