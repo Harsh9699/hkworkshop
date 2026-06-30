@@ -752,10 +752,6 @@ body.loaded .preloader-content {
 
 /* Responsive */
 @media (max-width: 900px) {
-    /* Hide background Spline on mobile to prevent Android lagging/crashing */
-    .global-spline-bg {
-        display: none !important;
-    }
 
     .desktop-menu {
         display: none;
